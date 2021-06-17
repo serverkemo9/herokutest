@@ -1,3 +1,4 @@
+import os 
 try:
   import mysql.connector
   from mysql.connector import Error
