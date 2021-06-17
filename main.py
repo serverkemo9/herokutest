@@ -1,8 +1,15 @@
-from flask import Flask    
-from flask import Flask, request, jsonify
 import os 
-import gunicorn
-app = Flask(__name__)                                                                         
+
+
+
+try:
+	from flask import Flask    
+	from flask import Flask, request, jsonify
+except:
+	os.system('pip3 install flask')
+
+	
+	app = Flask(__name__)                                                                         
 
                                                                                                       
 @app.route('/send', methods=['GET'])                                                                                     
