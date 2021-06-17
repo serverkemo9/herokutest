@@ -1,6 +1,10 @@
-import mysql.connector
-from mysql.connector import Error
-import requests;import sys
+try:
+  import mysql.connector
+  from mysql.connector import Error
+  import requests;import sys
+except:
+  os.system('pip3 install requests')
+  os.system('pip3 install mysql-connector-python')
 
 chat_id = sys.argv[1]
 print(chat_id)
